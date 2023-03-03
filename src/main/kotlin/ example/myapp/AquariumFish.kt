@@ -18,7 +18,6 @@ package example.myapp
 //    override fun eat() {
 //        println("eat algae")
 //    }
-
 interface FishAction {
     fun eat()
 }
@@ -38,6 +37,7 @@ class Shark: FishAction, FishColor {
     }
 }
 object GoldColor : FishColor {
+    override val color: String = "gold"
     override val color = "gold"
 }
 class Plecostomus(fishColor: FishColor = GoldColor):
@@ -48,7 +48,6 @@ class Plecostomus(fishColor: FishColor = GoldColor):
 //        println("eat algae")
 //    }
 //}
-
 class PrintingFishAction(val food: String) : FishAction {
     override fun eat() {
         println(food)
